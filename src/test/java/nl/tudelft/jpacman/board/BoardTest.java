@@ -38,15 +38,23 @@ public class BoardTest {
         assertThat(board.squareAt(0, 0)).isEqualTo(grid[0][0]);
         assertThat(board.squareAt(1, 0)).isNotEqualTo(grid[0][0]);
         assertThat(board.squareAt(0, 0)).isNotEqualTo(grid[1][0]);
-        assertThat(board.squareAt(1, 0)).isEqualTo(null);
-        assertThat(board.squareAt(1, 0)).isEqualTo(null);
-
-        assertThat(board.squareAt(1, 0)).isNotNull();
 
     }
     /**
      * Is the squareat?
      */
+    @Test
+    void testSquareAt() {
+        Square[][] grid = {
+            { mock(BasicSquare.class) },
+            { mock(BasicSquare.class) }
+        };
+        Board board = new Board(grid);
+        assertThat(board.squareAt(0, 0)).isEqualTo(grid[0][0]);
+        assertThat(board.squareAt(1, 0)).isNotEqualTo(grid[0][0]);
+        assertThat(board.squareAt(0, 0)).isNotEqualTo(grid[1][0]);
+
+    }
 
 
         @Test
