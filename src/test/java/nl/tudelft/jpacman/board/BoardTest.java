@@ -53,7 +53,7 @@ public class BoardTest {
         void test() {
 
 
-            assertThrows(NullPointerException.class, () -> {
+            assertThrows(AssertionError.class, () -> {
                 new Board(null);
             });
 
