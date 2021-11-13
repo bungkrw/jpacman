@@ -61,8 +61,8 @@ public class MapParserTest {
                 Create a map with inconsistent size between
                 each row or contain invalid characters
                 */
-                map.add("########## ##");
-                map.add("#P        G#");
+                map.add("############");
+                map.add("#A        G#");
                 map.add("############");
                 mapParser.parseMap(map);
             });
